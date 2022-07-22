@@ -15,10 +15,10 @@ export function defineCancelApiObject(apiObject) {
         // associating the request cancellation handler with the API property name
         cancelApiObject[apiPropertyName] = {
             handleRequestCancellation: () => {
-                // if teh controller already exists,
-                // cancelling the request
+                // if the controller already exists,
+                // canceling the request
                 if (cancellationControllerObject.controller) {
-                    // cancelling the request and returning this custom message
+                    // canceling the request and returning this custom message
                     cancellationControllerObject.controller.abort()
                 }
 
